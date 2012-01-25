@@ -1,0 +1,6 @@
+*.log
+*.sql
+*.sqlite
+Gemfile
+Gemfile.lock
+

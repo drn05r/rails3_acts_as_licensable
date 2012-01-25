@@ -1,0 +1,9 @@
+<h1>
+	Licenses (<%= @licenses.length %>)
+</h1>
+
+	<ul class="sectionIcons">
+	  <li><%= link_to 'New License', new_license_path %></li>
+	</ul>
+
+<%= render :partial => "table", :locals => { :collection => @licenses } %>
