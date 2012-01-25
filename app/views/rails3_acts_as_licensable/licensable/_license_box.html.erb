@@ -1,22 +1,17 @@
 <% c_type = visible_name contributable %>
 
-<div class="contribution_section_box">
+<div class="licensed_section_box">
 	<p class="heading">
-		<%= info_icon_with_tooltip("This specifies what rights users have when they download and use this #{c_type}.") %>
 		License
 		<a name="license"></a>
 	</p>
 
-  <% if contributable.license_id %>
+    <% dc_title = licensable.title %>
+    <% dc_description = h(licensable.respond_to?('description') ? licensable.description : licensable.body) %>
+    <% dc_date = licensable.created_at %>
+    <% dc_creator = "" %>
+    <% dc_source = "" %>
 
-    <% dc_title = contributable.title %>
-    <% dc_description = h(contributable.respond_to?('description_html') ? contributable.description_html : contributable.body_html) %>
-    <% dc_date = contributable.created_at %>
-    <% dc_creator = contributor(contributable.contribution.contributor_id, contributable.contribution.contributor_type, link=false)  %>
-    <% dc_source = Conf.base_uri + request.request_uri %>
-
-
-    <% @license = License.find(contributable.license_id) %>
 
     <%=  "<!--
 
@@ -35,11 +30,11 @@
        </Agent></dc:rights>
        <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Data\" />
        <dc:source rdf:resource=\"#{dc_source}\"/>
-       <license rdf:resource=\"#{@license.url}\" />
+       <license rdf:resource=\"#{licensable.license.url}\" />
     </Work>
 
-    <License rdf:about=\"#{@license.url}\">"%>
-    <% @license.license_attributes.each do |attrib| %><%= "  <#{attrib.predicate} rdf:resource=\"#{attrib.uri}\" />" %><% end %>
+    <License rdf:about=\"#{licensable.license.url}\">"%>
+    <% licensable.license.license_attributes.each do |attrib| %><%= "  <#{attrib.predicate} rdf:resource=\"#{attrib.uri}\" />" %><% end %>
     </License>
 
     </rdf:RDF>
@@ -48,18 +43,9 @@
 
   <% end %>
 
-  <div class="contribution_currentlicense">
+  <div class="licensable_currentlicense">
     <p>
-      <% if contributable.respond_to?('versions') %>
-        All versions of this <%= visible_name(contributable) -%> are
-      <% else %>
-        This <%= visible_name(contributable) -%> is
-      <% end %>
-      <% if contributable.license_id %>
-        licensed under: <br/><br/><%= license_icon_link(@license) %>
-      <% else %>
-        not licensed.
-      <% end %>
+      <%= licensable.title -%> is licensed under: <br/><br/><%= license_icon_link(@license) %>
     </p>
   </div>
 	

@@ -1,14 +1,11 @@
 <% if params[object] && !params[object][:license_id].blank? %>
 	<% @license = License.find(params[object][:license_id]) %>
 <% elsif edit %>
-	<% @license = License.find_by_id(contributable.license_id) %>
-<% else %>
-    <% @license = License.find(2) %>
+	<% @license = licensable.license %>
 <% end %>
 
 <div class="fold">
     <div class="foldTitle">
-      <%= info_icon_with_tooltip("This section allows you to specify the <strong>rights</strong> that people have when they download and use this File, by setting the license. <br/><br/>By default, the license specifies that people are allowed to build on this File as long as they give the original author credit and share their resulting work under the same conditions.") %>
       License/Rights
 			<% if edit %>
 				<hr />

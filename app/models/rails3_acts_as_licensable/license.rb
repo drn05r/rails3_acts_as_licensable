@@ -11,7 +11,7 @@ module Rails3ActsAsLicensable
     def self.find_license_options_set(license)
       license_options = Array.new
       unless license.nil?
-    	license.license_attibutes.each do |license_attribute|
+    	license.license_attributes.each do |license_attribute|
           license_options << license_attribute.license_option
         end
       end

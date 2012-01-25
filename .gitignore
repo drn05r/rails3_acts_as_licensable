@@ -1,6 +1,7 @@
 *.log
 *.sql
 *.sqlite
-Gemfile
-Gemfile.lock
-
+*.sqlite3
+*.pid
+test/dummy/app/views/layouts/application.html.erb
+test/dummy/app/assets/javascripts/application.js 

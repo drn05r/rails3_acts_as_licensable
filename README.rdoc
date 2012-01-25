@@ -1,3 +1,27 @@
 = Rails3ActsAsLicensable
 
-This project rocks and uses MIT-LICENSE.
+== Installation
+
+Clone the Rails3ActsAsLicensable Engine from GitHub.
+
+  git clone git://github.com/drn05r/rails3_acts_as_licensable.git
+
+In the application using the engine add the following line to the Gemfile (assuming the engine is cloned to the same parent directory as the application):
+  
+  gem 'rails3_acts_as_licensable' :path => "../rails3_acts_as_licensable"
+
+Again the in application using the engine at the following line before the final end in config/routes.rb.
+
+  mount Rails3ActsAsLicensable::Engine => "/"
+
+Run the following line from the root directory of the application using the engine, answering yes to any prompted questions.
+
+  rails generate rails3_acts_as_licensable
+
+Then migrate the database.
+
+  rake db:migrate
+
+Then start your application as normal.
+
+  rails server

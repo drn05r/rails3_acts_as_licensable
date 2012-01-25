@@ -19,12 +19,6 @@
 							<b><%= link_to h(license.url), license.url %></b>
 						</p>
 						
-						<% if license.description and license.description.length > 0 %>
-							<div class="desc" style="font-size: 85%;">
-								<%= truncate(strip_html(license.description), :length => 180) %>
-							</div>
-						<% end %>
-						
 					</td>
 			    <td class="actions"  style="width: 80px;">
 		      	<%= link_to "View", license_path(license) %>

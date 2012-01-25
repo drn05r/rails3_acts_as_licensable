@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120124182242) do
+ActiveRecord::Schema.define(:version => 20120125114019) do
 
   create_table "rails3_acts_as_licensable_license_attributes", :force => true do |t|
     t.integer  "license_id"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20120124182242) do
   create_table "rails3_acts_as_licensable_licenses", :force => true do |t|
     t.string   "unique_name"
     t.string   "title"
-    t.text     "description"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
