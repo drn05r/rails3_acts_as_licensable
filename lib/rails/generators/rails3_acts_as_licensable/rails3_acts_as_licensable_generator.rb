@@ -20,12 +20,46 @@ class Rails3ActsAsLicensableGenerator < Rails::Generators::Base
     end
   end
 
-  def create_migration_file
+  def create_migration_files
     migration_template 'migration_licenses.rb', 'db/migrate/create_rails3_acts_as_licensable_licenses_table.rb'
     migration_template 'migration_license_options.rb', 'db/migrate/create_rails3_acts_as_licensable_license_options_table.rb'
     migration_template 'migration_license_attributes.rb', 'db/migrate/create_rails3_acts_as_licensable_license_attributes_table.rb'
     migration_template 'migration_add_licenses.rb', 'db/migrate/add_rails3_acts_as_licensable_licenses.rb'
+  end
+
+  def create_config_files
     template 'config.yml', 'config/rails3_acts_as_licensable.yml'
+  end
+
+  def create_locale_files
+    if File.exists? "config/initializers/locale.rb"
+      f = File.open "config/initializers/locale.rb" 
+      locale = f.read; f.close
+      unless locale =~ /I18n.load_path \+= Dir\[Rails.root.join\('config', 'locale', '\*.{rb,yml}'\)\]/
+        print "    \e[1m\e[34mquestion\e[0m  Your config/initializers/locale.rb requires an extra line to load locale files from 'config/locales/'. Is this okay? [y/n] "
+        begin
+          answer = gets.chomp
+        end while not answer =~ /[yn]/i
+        if answer =~ /y/i
+          locale += "\nI18n.load_path += Dir[Rails.root.join('config', 'locale', '*.{rb,yml}')]"
+
+          tmp_real_path = File.expand_path("tmp/~locale.rb")
+
+          tmp = File.open tmp_real_path, "w"
+          tmp.write locale; tmp.close
+
+          remove_file 'config/initializers/locale.rb'
+          copy_file tmp_real_path, 'config/initializers/locale.rb'
+          remove_file tmp_real_path
+        end
+      else
+        puts "    \e[1m\e[33mskipping\e[0m  config/initializers/locale.rb modification is already done."
+      end
+    else
+      template 'locale.rb' 'config/initializers/locale.rb'
+    end
+    template 'en.yml', 'config/locales/rails3_acts_as_licensable.en.yml'
+    template 'de.yml', 'config/locales/rails3_acts_as_licensable.de.yml'
   end
 
   def update_application_template

@@ -7,5 +7,11 @@ module Rails3ActsAsLicensable
       str.gsub(/<(\/|\s)*[^(#{preserve_arr})][^>]*>/,'')
     end
 
+    def license_url_locale
+	unless I18n.locale.to_s == "en"
+            return I18n.locale.to_s+"/"
+        end
+	return ""
+    end
   end
 end

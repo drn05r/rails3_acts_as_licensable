@@ -1,9 +1,9 @@
 module Rails3ActsAsLicensable
   class License < ActiveRecord::Base
-    attr_accessible :unique_name, :title, :url
+    attr_accessible :unique_name, :url
 
-    validates_presence_of :unique_name, :title, :url
-    validates_uniqueness_of :unique_name, :title, :url
+    validates_presence_of :unique_name, :url
+    validates_uniqueness_of :unique_name, :url
   
     has_many :license_attributes, 
              :dependent => :destroy
@@ -11,7 +11,7 @@ module Rails3ActsAsLicensable
     def self.find_license_options_set(license)
       license_options = Array.new
       unless license.nil?
-    	license.license_attributes.each do |license_attribute|
+    	license.license_attibutes.each do |license_attribute|
           license_options << license_attribute.license_option
         end
       end

@@ -1,0 +1,97 @@
+en: 
+  r3_aal:
+    view: view
+    license: license
+    title: title
+    description: description
+    created_at: added on
+    updated_at: updated on
+    url: URL
+    attribute: attribute
+    no_attributes: no license attributes
+
+
+  license_options:
+  
+    reproduction:
+      title: Permits Reproduction
+      description: Permits making multiple copies
+    
+    distribution:
+      title: Permits Distribution
+      description: Permits distribution, public display, and publicly performance
+  
+    derivs:
+      title: Permits Derivative Works
+      description: Permits distribution of derivative works
+  
+    highincome:
+      title: Prohibits High Income Nation Use
+      description: Prohibits use in a non-developing country
+  
+    sharing:
+      title: Permits Sharing
+      description: Permits commercial derivatives, but only non-commercial distribution
+  
+    notice:
+      title: Requires Notice
+      description: Requries copyright and license notices be kept intact
+  
+    attribution:
+      title: Requires Attribution
+      description: Requires credit be given to copyright holder and/or author
+  
+    sharealike:
+      title: Requires Share Alike
+      description: Requires derivative works be licensed under the same terms or compatible terms as the original work
+  
+    sourcecode:
+      title: Requires Source Code
+      description: Requires source code (the preferred form for making modifications) must be provided when exercising some rights granted by the license.
+  
+    copyleft:
+      title: Requires Copyleft
+      description: Requires derivative and combined works must be licensed under specified terms, similar to those on the original work
+  
+    lessercopyleft:
+      title: Requires Lesser Copyleft
+      description: Requires derivative works must be licensed under specified terms, with at least the same conditions as the original work; combinations with the work may be licensed under different terms
+  
+    commercial:
+      title: Prohibits Commercial Use
+      description: Prohibits exercising rights for commercial purposes
+
+    highincome:
+      title: Prohibits High Income Nation Use
+      description: Prohibits use in a non-developing country
+
+         
+  licenses:
+  
+    by_nd_3_0:
+      title: Creative Commons Attribution-No Derivative Works 3.0 Unported 
+      description: This license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to you.
+
+    by_sa_3_0:
+      title: Creative Commons Attribution-Share Alike 3.0 Unported
+      description: This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to "copyleft" free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
+
+    by_3_0: 
+      title: Creative Commons Attribution 3.0 Unported
+      description: This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
+  
+    by_nc_nd_3_0:
+      title: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported
+      description: This license is the most restrictive of our six main licenses, only allowing others to download your works and share them with others as long as they credit you, but they can’t change them in any way or use them commercially.
+  
+    by_nc_3_0:
+      title: Creative Commons Attribution-Noncommercial 3.0 Unported
+      description: This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms. 
+
+    by_nc_sa_3_0:
+      title: Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported
+      description: This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
+
+    cc0_1_0:
+      title: CC0 1.0 Universal (Public Domain License)
+      description: This license lets others copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. 

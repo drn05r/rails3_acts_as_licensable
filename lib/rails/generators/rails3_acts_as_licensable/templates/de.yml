@@ -1,0 +1,94 @@
+de:
+  r3_aal:
+    view: sehen
+    license: Lizenz
+    title: Titel
+    description: Beschreibung
+    created_at: aufgenommen am
+    updated_at: aktualisiert am
+    url: URL
+    attribute: Attribut
+    no_attributes: Keine Lizenz Attribute
+    
+
+  license_options:
+  
+    reproduction:
+      title: Erlaubt Reproduktion
+      description: Erlaubt mehrere Kopien
+
+    distribution:
+      title: Erlaubt Verteilung
+      description: Erlaubt vertrieb, öffentliche Ausstellung und öffentliche Leistungen
+  
+    derivs:
+      title: Erlaubt Abgeleiten Werken
+      description: Erlaubt verteilung von abgeleiteten Werken
+  
+    sharing:
+      title: Erlaubt Freigabe
+      description: Genehmigungen kommerzieller Derivate, aber nur nicht-kommerzielle Distribution
+  
+    notice:
+      title: Benötigt Hinweis
+      description: Benötigt Copyright-und Lizenzhinweis intakt gehalten werden
+  
+    attribution:
+      title: Benötigt Zuschreibung
+      description: Benötigt kredit an Copyright-Inhaber und / oder Autors gegeben werden
+  
+    sharealike:
+      title: Benötigt Share Alike 
+      description: Benötigt abgeleitete Werke unter den gleichen Bedingungen oder kompatible Bedingungen wie die ursprüngliche Arbeit lizenziert werden
+  
+    sourcecode:
+      title: Benötigt Source-Code
+      description: Source-Code (die bevorzugte Form, die für Bearbeitungen) ist erforderlich, wenn die Ausübung einiger Rechte die Lizenz erteilt werden.
+
+    copyleft:
+      title: Benötigt Copyleft
+      description: Benötigt Derivat und kombinierte Arbeiten müssen unter bestimmten Bedingungen lizenziert werden, ähnlich wie auf dem Original
+  
+    lessercopyleft:
+      title: Benötigt Lesser Copyleft
+      description: Benötigt abgeleitete Werke müssen unter bestimmten Bedingungen lizenziert werden, mit mindestens den gleichen Bedingungen wie die ursprüngliche Arbeit, Kombinationen mit der Arbeit unter verschiedenen Bedingungen lizenziert werden
+ 
+    commercial:
+      title: Verbietet Kommerzielle Nutzung
+      description: Verbietet Ausübung der Rechte für gewerbliche Zwecke
+
+    highincome:
+      title: Verbietet 
+      description: Verbietet einsatz in einem Nicht-Entwicklungsland
+
+         
+  licenses:
+
+    by_3_0: 
+      title: Namensnennung 3.0 Deutschland
+      description: Diese Lizenz erlaubt anderen, Ihr Werk/Ihren Inhalt zu verbreiten, zu remixen, zu verbessern und darauf aufzubauen, auch kommerziell, solange Sie als Urheber des Originals genannt werden. Dies ist die freieste Lizenz, die wir anbieten, empfohlen für maximale Verbreitung und Nutzung des lizenzierten Materials.
+
+  
+    by_nd_3_0:
+      title: Namensnennung-Keine Bearbeitung 3.0 Deutschland
+      description: Diese Lizenz erlaubt anderen die Weiterverbreitung Ihres Werkes/Inhaltes, kommerziell wie nicht-kommerziell, solange dies ohne Veränderungen und vollständig geschieht und Sie als Urheber genannt werden.
+  
+    by_nc_sa_3_0:
+      title: Namensnennung-Nicht-kommerziell-Weitergabe unter gleichen Bedingungen 3.0 Deutschland
+      description: Diese Lizenz erlaubt es anderen, Ihr Werk/Ihren Inhalt zu verbreiten, zu remixen, zu verbessern und darauf aufzubauen, allerdings nur nicht-kommerziell und solange Sie als Urheber des Originals genannt werden und die auf Ihrem Werk/Inhalt basierenden neuen Werke unter denselben Bedingungen veröffentlicht werden.
+
+    by_sa_3_0:
+      title: Namensnennung-Weitergabe unter gleichen Bedingungen 3.0 Deutschland 
+      description: Diese Lizenz erlaubt es anderen, Ihr Werk/Ihren Inhalt zu verbreiten, zu remixen, zu verbessern und darauf aufzubauen, auch kommerziell, solange Sie als Urheber des Originals genannt werden und die auf Ihrem Werk/Inhalt basierenden neuen Werke unter denselben Bedingungen veröffentlicht werden. Diese Lizenz wird oft mit "Copyleft"-Lizenzen im Bereich freier und Open Source Software verglichen. Alle neuen Werke/Inhalte, die auf Ihrem aufbauen, werden unter derselben Lizenz stehen, also auch kommerziell nutzbar sein. Dies ist die Lizenz, die auch von der Wikipedia eingesetzt wird, empfohlen für Material, für das eine Einbindung von Wikipedia-Material oder anderen so lizenzierten Inhalten sinnvoll sein kann. 
+  
+    by_nc_3_0:
+      title: Namensnennung-Nicht-kommerziell 3.0 Deutschland
+      description: Diese Lizenz erlaubt es anderen, Ihr Werk/Ihren Inhalt zu verbreiten, zu remixen, zu verbessern und darauf aufzubauen, allerdings nur nicht-kommerziell. Und obwohl auch bei den auf Ihrem Werk/Inhalt basierenden neuen Werken Ihr Namen mit genannt werden muss und sie nur nicht-kommerziell verwendet werden dürfen, müssen diese neuen Werke nicht unter denselben Bedingungen lizenziert werden.
+
+    by_nc_nd_3_0:
+      title: Namensnennung-NichtKommerziell-KeineBearbeitung 3.0 Deutschland
+      description: Dies ist die restriktivste unserer sechs Kernlizenzen. Sie erlaubt lediglich Download und Weiterverteilung des Werkes/Inhaltes unter Nennung Ihres Namens, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung. 
+  
+    cc0_1_0:
+      title: CC0 1.0 Universell (Public Domain Dedication)
+      description: Diese Lizenz lässt andere kopieren, zu verändern, zu verbreiten und öffentlich aufführen, auch für kommerzielle Zwecke, ganz ohne um Erlaubnis zu fragen. 

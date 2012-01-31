@@ -2,7 +2,6 @@ class CreateRails3ActsAsLicensableLicensesTable < ActiveRecord::Migration
   def self.up
     create_table :rails3_acts_as_licensable_licenses do |t|
       t.string :unique_name
-      t.string :title
       t.string :url
       t.timestamps
     end
