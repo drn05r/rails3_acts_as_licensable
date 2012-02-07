@@ -18,10 +18,22 @@ Run the following line from the root directory of the application using the engi
 
   rails generate rails3_acts_as_licensable
 
+
+== Making Classes Licensable
+
+Add the following line at the beginning of the model files you want to be licensable.
+
+  include rails3_acts_as_licensable
+
+Add the following line inside the class declaration of the model files you want to be licensable.
+
+  acts_as_licensable
+
 Then migrate the database.
 
   rake db:migrate
 
-Then start your application as normal.
 
-  rails server
+== Configuring Licenses
+
+By default this module provides the 6 Creative Commons licenses as describe at http://creativecommons.org/licenses/ as well as the CC0 Public Domain license describe at http://creativecommons.org/choose/zero/.  If you wish to add additional licenses you will need to edit the rails3_acts_as_licensable.yml file in your application's config directory before migrating the database.  You will also need to edit the appropriate locales files in your application's config/locales directory.  Currently English and German locales are provided.
