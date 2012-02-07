@@ -25,6 +25,7 @@ class Rails3ActsAsLicensableGenerator < Rails::Generators::Base
     migration_template 'migration_license_options.rb', 'db/migrate/create_rails3_acts_as_licensable_license_options_table.rb'
     migration_template 'migration_license_attributes.rb', 'db/migrate/create_rails3_acts_as_licensable_license_attributes_table.rb'
     migration_template 'migration_add_licenses.rb', 'db/migrate/add_rails3_acts_as_licensable_licenses.rb'
+    migration_template 'migration_licensings.rb', 'db/migrate/create_rails3_acts_as_licensable_licensings_table.rb'
   end
 
   def create_config_files

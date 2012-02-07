@@ -8,9 +8,7 @@ module Rails3ActsAsLicensable
     end
 
     def license_url_locale
-	unless I18n.locale.to_s == "en"
-            return I18n.locale.to_s+"/"
-        end
+        return "deed.#{I18n.locale.to_s}"
 	return ""
     end
   end
