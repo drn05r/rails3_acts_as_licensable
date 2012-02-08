@@ -10,7 +10,7 @@ In the application using the engine add the following line to the Gemfile (assum
   
   gem 'rails3_acts_as_licensable' :path => "../rails3_acts_as_licensable"
 
-Again the in application using the engine at the following line before the final end in config/routes.rb.
+Again, in application using the engine add the following line before the final 'end' in config/routes.rb.
 
   mount Rails3ActsAsLicensable::Engine => "/"
 
@@ -23,7 +23,7 @@ Run the following line from the root directory of the application using the engi
 
 Add the following line at the beginning of the model files you want to be licensable.
 
-  include rails3_acts_as_licensable
+  include rails3_acts_as_licensable/licensable
 
 Add the following line inside the class declaration of the model files you want to be licensable.
 
@@ -36,4 +36,9 @@ Then migrate the database.
 
 == Configuring Licenses
 
-By default this module provides the 6 Creative Commons licenses as describe at http://creativecommons.org/licenses/ as well as the CC0 Public Domain license describe at http://creativecommons.org/choose/zero/.  If you wish to add additional licenses you will need to edit the rails3_acts_as_licensable.yml file in your application's config directory before migrating the database.  You will also need to edit the appropriate locales files in your application's config/locales directory.  Currently English and German locales are provided.
+By default this module provides the 6 Creative Commons licenses as describe at http://creativecommons.org/licenses/ as well as the CC0 Public Domain license describe at http://creativecommons.org/choose/zero/.  
+
+If you wish to add additional licenses you will need to edit the rails3_acts_as_licensable.yml file in your application's config directory before migrating the database.  You will also need to edit the appropriate locales files in the application using the engine's config/locales directory.  Currently English and German locales are provided.
+
+By default the license_icon_url helper function in app/helpers/rails3_acts_as_licensable/application_helper.rb provides license icions of the size 88x31 pixels. If you wish to use icoms of a different size you must specify this in the second parameter.  Other valid sizes include 80x15 and 88x15, see http://i.creativecommons.org/l/ to see what icon sizes are provided for the licenses you intend to use.  For consistency the license_icon_size parameter can be set in the application using the engine's config/rails3_acts_as_licensable.yml and this will be used by the /licenses and /licenses/:id pages.
+

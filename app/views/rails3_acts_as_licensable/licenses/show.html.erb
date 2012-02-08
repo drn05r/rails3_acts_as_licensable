@@ -6,6 +6,7 @@
   <p><b><%= t("r3_aal.title").capitalize %>: </b><%=h t "licenses.#{@license.unique_name}.title" %></p>
   <p><b><%= t("r3_aal.description").capitalize %>: </b><%=h t "licenses.#{@license.unique_name}.description" %></p>
   <p><b><%= t("r3_aal.url").upcase %>: </b><%= link_to h(@license.url), @license.url+license_url_locale %></p>
+  <p><b><%= t("r3_aal.icon").capitalize %>: <b><%= image_tag ( license_icon_url(@license.url,@license_config['license_icon_size']) ) %></p>
   <p><b><%= t("r3_aal.created_at").capitalize %>: </b><%= @license.created_at %></p>
   <p><b><%= t("r3_aal.updated_at").capitalize %>: </b><%= @license.updated_at %></p>
   <h2><%= t("r3_aal.attribute").capitalize.pluralize %>: </h2>

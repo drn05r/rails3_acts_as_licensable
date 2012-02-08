@@ -4,6 +4,7 @@ de:
     license: Lizenz
     title: Titel
     description: Beschreibung
+    icon: Ikone
     created_at: aufgenommen am
     updated_at: aktualisiert am
     url: URL

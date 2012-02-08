@@ -8,15 +8,5 @@ module Rails3ActsAsLicensable
     has_many :license_attributes, 
              :dependent => :destroy
 
-    def self.find_license_options_set(license)
-      license_options = Array.new
-      unless license.nil?
-    	license.license_attibutes.each do |license_attribute|
-          license_options << license_attribute.license_option
-        end
-      end
-      return license_options
-    end
-           
   end  
 end
