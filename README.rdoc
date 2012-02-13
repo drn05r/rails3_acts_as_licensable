@@ -8,7 +8,7 @@ Clone the Rails3ActsAsLicensable Engine from GitHub.
 
 In the application using the engine add the following line to the Gemfile (assuming the engine is cloned to the same parent directory as the application):
   
-  gem 'rails3_acts_as_licensable' :path => "../rails3_acts_as_licensable"
+  gem 'rails3_acts_as_licensable', :path => "../rails3_acts_as_licensable"
 
 Again, in application using the engine add the following line before the final 'end' in config/routes.rb.
 
@@ -20,10 +20,6 @@ Run the following line from the root directory of the application using the engi
 
 
 == Making Classes Licensable
-
-Add the following line at the beginning of the model files you want to be licensable.
-
-  include rails3_acts_as_licensable/licensable
 
 Add the following line inside the class declaration of the model files you want to be licensable.
 

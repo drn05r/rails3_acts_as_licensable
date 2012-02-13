@@ -1,4 +1,4 @@
-require "rdf_on_rails"
+#require "rdf_on_rails"
 
 module Rails3ActsAsLicensable
   class License < ActiveRecord::Base
@@ -59,7 +59,7 @@ module Rails3ActsAsLicensable
       "#{url}#{url.match(/\/$/) ? "" : "/"}#{size}.png".gsub("creativecommons.org/licenses", "i.creativecommons.org/l")
     end
     
-    acts_as_rdf
+#    acts_as_rdf
 
     def to_rdf_uri(options = nil)
       if attribute_present?(:url)
