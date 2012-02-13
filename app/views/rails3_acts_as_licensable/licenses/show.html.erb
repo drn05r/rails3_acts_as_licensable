@@ -1,22 +1,58 @@
-<%  h t "licenses.#{@license.unique_name}.title" -%>
-
-<h1><%= t("r3_aal.license").capitalize %>: <%= h  t "licenses.#{@license.unique_name}.title" %></h1>
+<h1>
+  <%= t("rails3_acts_as_licensable.license").capitalize %>:
+  <%= @license.title %>
+</h1>
 
 <div>
-  <p><b><%= t("r3_aal.title").capitalize %>: </b><%=h t "licenses.#{@license.unique_name}.title" %></p>
-  <p><b><%= t("r3_aal.description").capitalize %>: </b><%=h t "licenses.#{@license.unique_name}.description" %></p>
-  <p><b><%= t("r3_aal.url").upcase %>: </b><%= link_to h(@license.url), @license.url+license_url_locale %></p>
-  <p><b><%= t("r3_aal.icon").capitalize %>: <b><%= image_tag ( license_icon_url(@license.url,@license_config['license_icon_size']) ) %></p>
-  <p><b><%= t("r3_aal.created_at").capitalize %>: </b><%= @license.created_at %></p>
-  <p><b><%= t("r3_aal.updated_at").capitalize %>: </b><%= @license.updated_at %></p>
-  <h2><%= t("r3_aal.attribute").capitalize.pluralize %>: </h2>
-  <% unless @license.license_attributes.empty? %>
-  <ul>
-     <%= render :partial => "rails3_acts_as_licensable/license_attributes/attribute", :collection => Rails3ActsAsLicensable::LicenseAttribute.find(:all, :conditions => ["license_id = ?", @license.id], :order => "license_option_id") %>
-  </ul>
-  <% else %>
-  <p><%= t("r3_aal.no_attributes").capitalize %>: </p>
-  <% end %> 
+  <p>
+    <b><%= t("rails3_acts_as_licensable.title").capitalize %>:</b>
+    <%= @license.title %>
+  </p>
+  
+  <p>
+    <b><%= t("rails3_acts_as_licensable.description").capitalize %>:</b>
+    <%= @license.description %>
+  </p>
+  
+  <p>
+    <b><%= t("rails3_acts_as_licensable.url").upcase %>:</b>
+    <%= link_to @license.url, @license.url_with_locale, :class => "external" %>
+  </p>
+  
+  <p>
+    <b><%= t("rails3_acts_as_licensable.icon").capitalize %>:</b>
+    <%= license_icon_tag(@license) %>
+  </p>
+  
+  <p>
+    <b><%= t("rails3_acts_as_licensable.created_at").capitalize %>:</b>
+    <%= @license.created_at %>
+  </p>
+  
+  <p>
+    <b><%= t("rails3_acts_as_licensable.updated_at").capitalize %>:</b>
+    <%= @license.updated_at %>
+  </p>
+  
+  <h2>
+    <%= t("rails3_acts_as_licensable.attribute").capitalize.pluralize %> (<%= @license.license_attributes.count %>):
+  </h2>
+  
+  <%- if @license.license_attributes.any? -%>
+    <ul>
+      <% @license.license_attributes.each do |license_attribute| %>
+        <li>
+          <b>
+            <%= link_to license_attribute.title, license_attribute.uri, :class => "external" %>
+          </b>
+          -
+          <%= license_attribute.description %>
+        </li>
+      <% end %>
+    </ul>
+  <%- else -%>
+    <p>
+      <%= t("rails3_acts_as_licensable.no_attributes").capitalize %>
+    </p>
+  <%- end -%> 
 </div>
-
-

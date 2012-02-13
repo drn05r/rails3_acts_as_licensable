@@ -1,3 +1,3 @@
 Rails3ActsAsLicensable::Engine.routes.draw do
-  resources :licenses
+  resources :licenses, :only => [:index, :show]
 end

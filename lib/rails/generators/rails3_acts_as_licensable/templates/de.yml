@@ -1,5 +1,5 @@
 de:
-  r3_aal:
+  rails3_acts_as_licensable:
     view: sehen
     license: Lizenz
     title: Titel
